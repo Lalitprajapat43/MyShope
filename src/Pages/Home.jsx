@@ -1,115 +1,222 @@
 import React from 'react'
+import { SearchIcon,CameraIcon,LocationEditIcon,IndianRupeeIcon, StarIcon } from 'lucide-react'
 import { Link } from 'react-router-dom'
-
 function Home() {
-    return (
-        <div>
-            <header className=' bg-black h-10 text-white p-2  w-2xss'>
-                <ul className='flex  justify-between overflow-scroll gap-2 '>
-                    <li className=' hover:text-shadow-amber-200'><Link>Home</Link></li>
-                    <li><Link>Mans</Link></li>
-                    <li><Link>Womans</Link></li>
-                    <li><Link>Kids</Link></li>
-                    <li><Link>Beauty</Link></li>
-                    <li><Link>Kitchen</Link></li>
-                    <li><Link>Electronics</Link></li>
-
-
-                </ul>
-            </header>
-            <main>
-                <div className='h-30 lg:h-80  bg-amber-200 overflow-hidden flex items-center '>
-                    
-                </div>
-                <div className='h-30 border-2  '>
-                    <h1 className='  font-bold '>Tranding </h1>
-                   <div className='flex h-[90%] overflow-scroll gap-2'>
-                     <div className=' h-[90%] w-[70px] border-2'>
-                        <img className='h-[70%] border-2' 
-                        src='' alt='image' />
-                        <p>Phone</p>
-                    </div>
-                     <div className=' h-[90%] w-[70px] border-2'>
-                        <img className='h-[70%] border-2' 
-                        src='' alt='image' />
-                        <p>Phone</p>
-                    </div>
-                     <div className=' h-[90%] w-[70px] border-2'>
-                        <img className='h-[70%] border-2' 
-                        src='' alt='image' />
-                        <p>Phone</p>
-                    </div>
-                     <div className=' h-[80%] w-[70px] border-2'>
-                        <img className='h-[70%] border-2' 
-                        src='' alt='image' />
-                        <p>Phone</p>
-                    </div>
-                     <div className=' h-[80%] w-[70px] border-2'>
-                        <img className='h-[70%] border-2' 
-                        src='' alt='image' />
-                        <p>Phone</p>
-                    </div>
-                     <div className=' h-[80%] w-[70px] border-2'>
-                        <img className='h-[70%] border-2' 
-                        src='' alt='image' />
-                        <p>Phone</p>
-                    </div>
-                   </div>
-                </div>
-                {/* item boxes */}
-                <div className='flex  mt-4'>
-                    <div className='w-[40%] h-60 border-2 flex flex-wrap justify-between items-center p-1  '>
-                     <div className=' h-[40%] w-[70px] border-2'>
-                        <img className='h-[70%] border-2' 
-                        src='' alt='image' />
-                        <p>Phone</p>
-                    </div>
-                     <div className=' h-[40%] w-[70px] border-2'>
-                        <img className='h-[70%] border-2' 
-                        src='' alt='image' />
-                        <p>Phone</p>
-                    </div>
-                     <div className=' h-[40%] w-[70px] border-2'>
-                        <img className='h-[70%] border-2' 
-                        src='' alt='image' />
-                        <p>Phone</p>
-                    </div>
-                     <div className=' h-[40%] w-[70px] border-2'>
-                        <img className='h-[70%] border-2' 
-                        src='' alt='image' />
-                        <p>Phone</p>
-                    </div>
-
-                    </div>
-                </div>
-                <div className='w-[40%] h-60 border-2 flex flex-wrap justify-between items-center p-1  '>
-                     <div className=' h-[40%] w-[70px] border-2'>
-                        <img className='h-[70%] border-2' 
-                        src='' alt='image' />
-                        <p>Phone</p>
-                    </div>
-                     <div className=' h-[40%] w-[70px] border-2'>
-                        <img className='h-[70%] border-2' 
-                        src='' alt='image' />
-                        <p>Phone</p>
-                    </div>
-                     <div className=' h-[40%] w-[70px] border-2'>
-                        <img className='h-[70%] border-2' 
-                        src='' alt='image' />
-                        <p>Phone</p>
-                    </div>
-                     <div className=' h-[40%] w-[70px] border-2'>
-                        <img className='h-[70%] border-2' 
-                        src='' alt='image' />
-                        <p>Phone</p>
-                    </div>
-
-                    </div>
+  return (
+    <div>
+    {/* Searchbar starrt */}
+    <div className=' flex justify-between p-2  bg-amber-100'>
+        <input className=' w-[80%] outline-none' 
+        id='Search' 
+        type='Search' placeholder='Search ...'/>
+       <label htmlFor='Search'> <SearchIcon/></label>
+        <CameraIcon/>
+    </div>
+    {/* Adress Div */}
+    <div className=' flex gap-2  p-2 pb-0 '>
+    <LocationEditIcon/>
+    <p className=' text-gray-600'>Nagda dist ujjain,456335</p>
+    
+    </div>
+    <main>
+        <div className=' flex flex-wrap justify-between p-2 mt-5'>
             
-                
-            </main>
+            <div className='  h-20 p-1 flex flex-col items-center '>
+                <img className=' h-[90%] rounded-4xl border-2'
+                 src='' alt='image '/>
+                <p  
+                >All</p>
+            </div>
+            <div className='  h-20 p-1 flex flex-col items-center '>
+                <img className=' h-[90%] rounded-4xl border-2'
+                 src='' alt='image '/>
+                <p  
+                >All</p>
+            </div>
+            <div className='  h-20 p-1 flex flex-col items-center '>
+                <img className=' h-[90%] rounded-4xl border-2'
+                 src='' alt='image '/>
+                <p  
+                >All</p>
+            </div>
+            <div className='  h-20 p-1 flex flex-col items-center '>
+                <img className=' h-[90%] rounded-4xl border-2'
+                 src='' alt='image '/>
+                <p  
+                >All</p>
+            </div><div className='  h-20 p-1 flex flex-col items-center '>
+                <img className=' h-[90%] rounded-4xl border-2'
+                 src='' alt='image '/>
+                <p  
+                >All</p>
+            </div>
+            <div className='  h-20 p-1 flex flex-col items-center '>
+                <img className=' h-[90%] rounded-4xl border-2'
+                 src='' alt='image '/>
+                <p  
+                >All</p>
+            </div>
+
+
         </div>
-    )
+        {/* middell categories div  Gender */}
+       <div className='flex flex-col'>
+       <h1 className='p-2 font-bold font-stretch-100% text-2xl' 
+       >Product For You</h1>
+        <div className=' bg-gray-500 h-10  flex '>
+             <ul className=' w-[100%] flex   justify-between items-center p-4' >
+                <li><Link>Sort</Link></li>
+                <li><Link>Categories</Link></li>
+                <li><Link>Gender</Link></li>
+                <li><Link>Filter</Link></li>
+            </ul>
+            
+        </div>
+        </div>
+    {/* All Products div  */}
+<div className=' mt-2 flex  flex-wrap '>
+        <div className='flex flex-col  w-[50%] border-2 h-60 '>
+        <img className='h-[60%] border-2'
+         src='' alt='image '/> 
+     <div className='p-1'>
+           <p>Name</p> {/*Product Name  */}
+        <h1>400/-</h1>{/* Discount Price*/ }
+       <p className='flex items-center'><IndianRupeeIcon className='  size-3'/>500</p> {/* Actual Price*\ */}
+        <p>Free Dilevery</p>{/* Free Dilevery allo or not  */ }
+     </div>
+        <div className=' flex items-center justify-between p-1 pb-0' >
+            <div className=' flex items-center bg-blue-500 pl-1 pr-1 text-white rounded-full'>
+            <p>3.5</p>
+                <StarIcon className=' size-3'/>
+            <StarIcon className=' size-3'/>
+            <StarIcon className=' size-3'/>
+            </div>
+            <div>
+                <p>Trusted</p>
+            </div>
+            
+        </div>
+        
+    </div>
+        <div className='flex flex-col  w-[50%] border-2 h-60   '>
+        <img className='h-[60%] border-2'
+         src='' alt='image '/> 
+     <div className='p-1'>
+           <p>Name</p> {/*Product Name  */}
+        <h1>400/-</h1>{/* Discount Price*/ }
+       <p className='flex items-center'><IndianRupeeIcon className='  size-3'/>500</p> {/* Actual Price*\ */}
+        <p>Free Dilevery</p>{/* Free Dilevery allo or not  */ }
+     </div>
+        <div className=' flex items-center justify-between p-1 pb-0' >
+            <div className=' flex items-center bg-blue-500 pl-1 pr-1 text-white rounded-full'>
+            <p>3.5</p>
+                <StarIcon className=' size-3'/>
+            <StarIcon className=' size-3'/>
+            <StarIcon className=' size-3'/>
+            </div>
+            <div>
+                <p>Trusted</p>
+            </div>
+            
+        </div>
+        
+    </div>
+        <div className='flex flex-col  w-[50%] border-2 h-60  '>
+        <img className='h-[60%] border-2'
+         src='' alt='image '/> 
+     <div className='p-1'>
+           <p>Name</p> {/*Product Name  */}
+        <h1>400/-</h1>{/* Discount Price*/ }
+       <p className='flex items-center'><IndianRupeeIcon className='  size-3'/>500</p> {/* Actual Price*\ */}
+        <p>Free Dilevery</p>{/* Free Dilevery allo or not  */ }
+     </div>
+        <div className=' flex items-center justify-between p-1 pb-0' >
+            <div className=' flex items-center bg-blue-500 pl-1 pr-1 text-white rounded-full'>
+            <p>3.5</p>
+                <StarIcon className=' size-3'/>
+            <StarIcon className=' size-3'/>
+            <StarIcon className=' size-3'/>
+            </div>
+            <div>
+                <p>Trusted</p>
+            </div>
+            
+        </div>
+        
+    </div>
+        <div className='flex flex-col  w-[50%] border-2 h-60  '>
+        <img className='h-[60%] border-2'
+         src='' alt='image '/> 
+     <div className='p-1'>
+           <p>Name</p> {/*Product Name  */}
+        <h1>400/-</h1>{/* Discount Price*/ }
+       <p className='flex items-center'><IndianRupeeIcon className='  size-3'/>500</p> {/* Actual Price*\ */}
+        <p>Free Dilevery</p>{/* Free Dilevery allo or not  */ }
+     </div>
+        <div className=' flex items-center justify-between p-1 pb-0' >
+            <div className=' flex items-center bg-blue-500 pl-1 pr-1 text-white rounded-full'>
+            <p>3.5</p>
+                <StarIcon className=' size-3'/>
+            <StarIcon className=' size-3'/>
+            <StarIcon className=' size-3'/>
+            </div>
+            <div>
+                <p>Trusted</p>
+            </div>
+            
+        </div>
+        
+    </div>
+        <div className='flex flex-col  w-[50%] border-2 h-60  '>
+        <img className='h-[60%] border-2'
+         src='' alt='image '/> 
+     <div className='p-1'>
+           <p>Name</p> {/*Product Name  */}
+        <h1>400/-</h1>{/* Discount Price*/ }
+       <p className='flex items-center'><IndianRupeeIcon className='  size-3'/>500</p> {/* Actual Price*\ */}
+        <p>Free Dilevery</p>{/* Free Dilevery allo or not  */ }
+     </div>
+        <div className=' flex items-center justify-between p-1 pb-0' >
+            <div className=' flex items-center bg-blue-500 pl-1 pr-1 text-white rounded-full'>
+            <p>3.5</p>
+                <StarIcon className=' size-3'/>
+            <StarIcon className=' size-3'/>
+            <StarIcon className=' size-3'/>
+            </div>
+            <div>
+                <p>Trusted</p>
+            </div>
+            
+        </div>
+        
+    </div>
+        <div className='flex flex-col  w-[50%] border-2 h-60  '>
+        <img className='h-[60%] border-2'
+         src='' alt='image '/> 
+     <div className='p-1'>
+           <p>Name</p> {/*Product Name  */}
+        <h1>400/-</h1>{/* Discount Price*/ }
+       <p className='flex items-center'><IndianRupeeIcon className='  size-3'/>500</p> {/* Actual Price*\ */}
+        <p>Free Dilevery</p>{/* Free Dilevery allo or not  */ }
+     </div>
+        <div className=' flex items-center justify-between p-1 pb-0' >
+            <div className=' flex items-center bg-blue-500 pl-1 pr-1 text-white rounded-full'>
+            <p>3.5</p>
+                <StarIcon className=' size-3'/>
+            <StarIcon className=' size-3'/>
+            <StarIcon className=' size-3'/>
+            </div>
+            <div>
+                <p>Trusted</p>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+    </main>
+    </div>
+  )
 }
 
 export default Home
