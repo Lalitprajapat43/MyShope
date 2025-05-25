@@ -1,8 +1,22 @@
 import React from 'react'
 import { DeleteIcon,IndianRupeeIcon,IndentIncreaseIcon,IndentDecreaseIcon, CircleChevronLeftIcon, CircleAlertIcon } from 'lucide-react'
+import { useDispatch, useSelector } from 'react-redux'
+import { deleteCart } from '../SlicerRoom/MainSlicer'
+import { Link } from 'react-router-dom'
+
+
 export default function Cart() {
-  return (
-    <div>
+const CartData = useSelector(state => state.Main.Cart)
+const dispatch = useDispatch();
+
+ const handleDelete = (item) => {
+    dispatch(deleteCart(item));
+  };
+  
+
+
+    return (
+    <div className=' mt-16'>
     {/* Order Shiping Update div */}
         <div className=' h-10  flex justify-between items-center p-2 bg-rose-100 border-1 '>
             <CircleAlertIcon/>
@@ -12,61 +26,32 @@ export default function Cart() {
 
     {/* Product Cart div */}
      <section className=' mt-2 flex flex-col gap-1'>
-         <div className='flex justify-between p-1  border-2 items-center '>
+        {
+            CartData.map((item)=>(
+                 <div className='flex justify-between p-1  border-2 items-center '>
         
             <img className=' w-[80px]  border-2  h-[90px]'
-             src=' ' alt='' />
+             src={item.img} alt={item.ProductName} />
         
         <div className=' text-black gap-0 font-extralight' >
-            <h1 className=' font-bold'>Product Name </h1>
+            <h1 className=' font-bold'>{item.ProductName} </h1>
             <p>Short disc</p>
-            <p>400</p> {/*discount Price*/}
-            <p>500</p> {/*Actual Price*/}
+            <p>{item.Price}</p> {/*discount Price*/}
+            <p>{item.Price}</p> {/*Actual Price*/}
         </div>
         <div className='flex items-center gap-2 border-2 h-5 p-1 rounded-2xl bg-blue-600 text-amber-50  '>
             <button>-</button>
             <p>2</p>
             <button>+</button>
         </div>
-        <div className=' mb-[-5rem]'><DeleteIcon/></div>
+        <div className=' mb-[-5rem]'
+        onClick={() => handleDelete(item)}
+        ><DeleteIcon/></div>
       </div>
-       <div className='flex justify-between p-1  border-2 items-center '>
-        
-            <img className=' w-[80px]  border-2  h-[90px]'
-             src=' ' alt='' />
-        
-        <div className=' text-black gap-0 font-extralight' >
-            <h1 className=' font-bold'>Product Name </h1>
-            <p>Short disc</p>
-            <p>400</p> {/*discount Price*/}
-            <p>500</p> {/*Actual Price*/}
-        </div>
-        <div className='flex items-center gap-2 border-2 h-5 p-1 rounded-2xl bg-blue-600 text-amber-50  '>
-            <button>-</button>
-            <p>2</p>
-            <button>+</button>
-        </div>
-        <div className=' mb-[-5rem]'><DeleteIcon/></div>
-      </div>
-       <div className='flex justify-between p-1  border-2 items-center '>
-        
-            <img className=' w-[80px]  border-2  h-[90px]'
-             src=' ' alt='' />
-        
-        <div className=' text-black gap-0 font-extralight' >
-            <h1 className=' font-bold'>Product Name </h1>
-            <p>Short disc</p>
-            <p>400</p> {/*discount Price*/}
-            <p>500</p> {/*Actual Price*/}
-        </div>
-        <div className='flex items-center gap-2 border-2 h-5 p-1 rounded-2xl bg-blue-600 text-amber-50  '>
-            <button>-</button>
-            <p>2</p>
-            <button>+</button>
-        </div>
-        <div className=' mb-[-5rem]'><DeleteIcon/></div>
-      </div>
+            ))
 
+        }
+   
      </section>
       {/* Product Price div  */}
       <section  className='mt-2'>
@@ -101,9 +86,11 @@ export default function Cart() {
                 <h1 className='flex items-center'><IndianRupeeIcon className=' size-3'/>277</h1>
                 <p className=' font-bold '>VIEW PRICE DETAILS</p>
             </div>
-            <button className='  p-1 pt-0  rounded-2xl bg-blue-500  text-amber-50 w-fit h-fit '>
+            <Link to={'/address'} >
+                <button className='  p-1 pt-0  rounded-2xl bg-blue-500  text-amber-50 w-fit h-fit '>
                 Continue
             </button>
+            </Link>
         </div>
       </section>
     </div>
